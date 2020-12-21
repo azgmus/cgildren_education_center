@@ -1,0 +1,256 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+section + section {
+  margin-top: 20px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  color: inherit;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav__item a {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.nav__item a:hover {
+  color: #fff;
+  background-color: #22ad96;
+}
+
+.nav__item + .nav__item {
+  margin-left: 20px;
+}
+
+.offer {
+  color: #eee;
+  padding: 300px 0;
+  background-image: url(../img/kids.jpg);
+  background-size: cover;
+}
+
+.offer__title {
+  margin: auto;
+  text-align: center;
+}
+
+.offer__link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #E4262C;
+}
+
+.offer__link:hover {
+  -webkit-box-shadow: inset 0px 0px 10px #000;
+          box-shadow: inset 0px 0px 10px #000;
+  color: inherit;
+}
+
+.offer__link:focus {
+  -webkit-box-shadow: inset 0px 0px 10px #000;
+          box-shadow: inset 0px 0px 10px #000;
+  color: inherit;
+}
+
+.offer__link:active {
+  background-color: #9b2125;
+}
+
+.slick-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  color: #000;
+  outline: none;
+  background-color: #ffc222;
+}
+
+.slick-btn:hover {
+  cursor: pointer;
+}
+
+.slick-next::before {
+  content: ">";
+}
+
+.slick-prev::before {
+  content: "<";
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slider__inner {
+  text-align: center;
+  position: relative;
+}
+
+.slider__image {
+  margin: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.slider__item {
+  padding: 20px;
+}
+
+.slider__link {
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #E4262C;
+}
+
+.slider__link:hover {
+  -webkit-box-shadow: inset 0px 0px 10px #000;
+          box-shadow: inset 0px 0px 10px #000;
+  color: inherit;
+}
+
+.slider__link:focus {
+  -webkit-box-shadow: inset 0px 0px 10px #000;
+          box-shadow: inset 0px 0px 10px #000;
+  color: inherit;
+}
+
+.slider__link:active {
+  background-color: #9b2125;
+}
+
+.lightgallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lightgallery img {
+  width: 200px;
+}
+
+.lightgallery li {
+  padding: 0;
+  margin: 20px;
+  border: 2px #666 solid;
+}
+
+.demo-gallery > ul > li a {
+  border: 3px solid #FFF;
+  border-radius: 3px;
+  display: block;
+  overflow: hidden;
+}
+
+.demo-gallery > ul > li a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  transition: -webkit-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s, -webkit-transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+
+.demo-gallery > ul > li a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+          transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.footer {
+  background-color: #333333;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  min-height: 100px;
+}
+
+@media (max-width: 970px) {
+  .header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .offer h1 {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
