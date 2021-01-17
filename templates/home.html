@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row d-flex flex-column offer">
+
+                <h1 class="col offer__title">Центр развития детей дошкольного возраста</h1>
+
+                <a href="#" class="offer__link">УЗНАТЬ БОЛЬШЕ</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container slider">
+            <div class="slider__inner">
+                {% for group in kidsgroup_list %}
+
+                    <div class="slider__item">
+                        <img src='{{ group.image.url }}' class="slider__image">
+                        <h2 class="slider__title">{{ group.name }}</h2>
+                        <a href="/scheadule.html#scheadule1" class="slider__link">Расписание</a>
+                    </div>
+                {% endfor %}
+
+        </div>
+        </div>
+    </section>
+{% endblock content %}
