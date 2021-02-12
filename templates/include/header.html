@@ -9,26 +9,21 @@
                     <nav class="">
                         <ul class="nav d-flex justify-content-center">
                             <li class="nav__item">
-                                <a href="/index.html">Главная</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/about.html">О центре</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/features.html">Направления</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/teachers.html">Преподователи</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/scheadule.html">Расписание</a>
+                                <a href="/">Главная</a>
                             </li>
                             <li class="nav__item">
                                 <a href="/gallerey.html">Галерея</a>
                             </li>
+
+                            {% for i in info_pages %}
                             <li class="nav__item">
-                                <a href="/contacts.html">Контакты</a>
+                                <a href="/info/{{ i.name }}">{{ i.name }}</a>
                             </li>
+
+
+
+
+                            {% endfor %}
                         </ul>
                     </nav>
                 </div>
