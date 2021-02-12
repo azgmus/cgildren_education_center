@@ -7,7 +7,7 @@
 <body>
 
     {% include 'include/header.html' %}
-    <main style="margin-top: 120px">
+    <main id="main">
 
 
         {% block content %}
@@ -17,7 +17,13 @@
 
     {% include 'include/footer.html' %}
 
+    <script>
+        let HeaderHeight = document.getElementById('header').clientHeight;
+        stupidString = (HeaderHeight + 30).toString() + "px";
+        document.getElementById("main").style.marginTop = stupidString;
+        console.log(stupidString);
 
+    </script>
 
 
 
