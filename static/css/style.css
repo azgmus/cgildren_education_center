@@ -37,7 +37,9 @@ h2 {
   text-align: center;
 }
 
-
+a {
+  color: inherit;
+}
 
 a:hover {
   text-decoration: none;

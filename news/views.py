@@ -6,4 +6,11 @@ from .models import Article
 class NewsListView(ListView):
     model = Article
     queryset = Article.objects.all()
-    template_name = 'news.html'
+
+    template_name = 'news_list.html'
+
+
+class NewsDetailView(DetailView):
+    model = Article
+    slug_field = 'id'
+    template_name = 'article.html'

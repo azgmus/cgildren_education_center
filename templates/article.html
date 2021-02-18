@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container">
+
+
+
+    <a class="article" href="/news/{{ article.id }}">
+
+        <b style="display: block">{{ article.title|safe }}</b>
+        <i style="display: block">{{ article.subtitle|safe }}</i>
+        {% if article.image %}
+            <img style="max-height: 200px; max-width: 200px" src={{ article.image.url }}>
+        {% endif %}
+    </a>
+    
+    </div>
+{% endblock content %}
