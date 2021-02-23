@@ -6,6 +6,7 @@
 
 <body>
 
+
     {% include 'include/header.html' %}
     <main id="main">
 
@@ -14,7 +15,7 @@
 
         {% endblock content %}
     </main>
-
+    <a href="#" class="bvi-open" title="Версия сайта для слабовидящих">Версия сайта для слабовидящих</a>
     {% include 'include/footer.html' %}
 
     <script>
@@ -35,6 +36,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/script.js'%}"></script>
+
+    <script src="{% static 'js/js.cookie.min.js'%}"></script>
+    <script src="{% static 'js/bvi-init.min.js'%}"></script>
+    <script src="{% static 'js/bvi.min.js'%}"></script>
+
 </body>
 
 </html>

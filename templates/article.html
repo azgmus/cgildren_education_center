@@ -6,14 +6,15 @@
 
 
 
-    <a class="article" href="/news/{{ article.id }}">
+    <div class="article">
 
-        <b style="display: block">{{ article.title|safe }}</b>
-        <i style="display: block">{{ article.subtitle|safe }}</i>
+        <b style="display: block;font-size: 40px">{{ article.title|safe }}</b>
+        <i style="display: block;font-size: 30px">{{ article.subtitle|safe }}</i>
         {% if article.image %}
             <img style="max-height: 200px; max-width: 200px" src={{ article.image.url }}>
         {% endif %}
-    </a>
+        {{ article.content| safe }}
+    </div>
     
     </div>
 {% endblock content %}
