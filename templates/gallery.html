@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+
+    <section>
+        <div class="container">
+            <div class="demo-gallery">
+                <ul id="lightgallery" class="list-unstyled lightgallery row">
+                    {% for picture in picture_list %}
+                       <li class="col-xs-6 col-sm-4 col-md-3" data-src="{{ picture.image.url }}" data-sub-html="<h4>картинка 1</h4>">
+                        <a href="">
+                            <img class="img-responsive" src="{{ picture.image.url }}">
+                        </a>
+                    </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    {% if is_paginated %}
+
+        {% if page_obj.has_previous %}
+            <a class="btn btn-outline-info" href="?page=1">начало</a>
+            <a class="btn btn-outline-info" href="?page={{ page_obj.previous_page_number }}">предыдущая</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+
+            {% if page_obj.number == num %}
+
+                <a class="btn btn-info" href="?page={{ num }}">{{ num }}</a>
+
+
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'%}
+                <a class="btn btn-outline-info" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+
+        {% endfor %}
+        {% if page_obj.has_next %}
+            <a class="btn btn-outline-info" href="?page={{ page_obj.next_page_number }}">следующая</a>
+            <a class="btn btn-outline-info" href="?page={{ page_obj.paginator.num_pages }}">последняя</a>
+        {% endif %}
+    {% endif %}
+    </div>
+
+
+
+
+
+{% endblock content %}

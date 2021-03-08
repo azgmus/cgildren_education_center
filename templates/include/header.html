@@ -3,16 +3,23 @@
         <div class="container">
             <div class="row align-items-center justify-content-lg-between">
                 <div class="col-lg-auto">
-                    <a href="/index.html"><img src={% static "img/VC_Logo 1.png" %} alt="" class="logo"></a>
+                    <a href="/"><img src="{% static "img/VC_Logo 1.png" %}" alt="лого колледжа"  class="logo"></a>
                 </div>
                 <div class="col-lg-auto">
                     <nav class="">
                         <ul class="nav d-flex justify-content-center">
+
+                            <li class="nav__item">
+                                <a href="#" class="bvi-open" title="Версия сайта для слабовидящих">Версия сайта для слабовидящих</a>
+                            </li>
                             <li class="nav__item">
                                 <a href="/">Главная</a>
                             </li>
                             <li class="nav__item">
                                 <a href="/gallerey.html">Галерея</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="{% url 'News' %}">Новости</a>
                             </li>
 
                             {% for i in info_pages %}

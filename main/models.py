@@ -23,6 +23,10 @@ class InfoPages(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "дополнительная страница"
+        verbose_name_plural = "дополнительные страницы"
+
 
 class GeneralInfo(models.Model):
     contact_email = models.CharField('имейл, который будет показываться на каждой странице сайта', max_length=50)

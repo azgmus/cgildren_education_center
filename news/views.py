@@ -5,7 +5,7 @@ from .models import Article
 
 class NewsListView(ListView):
     model = Article
-    queryset = Article.objects.all()
+    queryset = Article.objects.all().order_by('id')
     paginate_by = 5
     template_name = 'news_list.html'
 
