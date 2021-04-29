@@ -6,5 +6,5 @@ from .models import Picture
 class GalleryListView(ListView):
     model = Picture
     queryset = Picture.objects.all().order_by('id')
-    paginate_by = 5
+    paginate_by = 10
     template_name = 'gallery.html'

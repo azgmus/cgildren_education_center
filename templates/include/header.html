@@ -4,19 +4,20 @@
             <div class="row align-items-center justify-content-lg-between">
                 <div class="col-lg-auto">
                     <a href="/"><img src="{% static "img/VC_Logo 1.png" %}" alt="лого колледжа"  class="logo"></a>
+
+                    <a href="#" class="bvi-open btn btn-primary" title="Версия сайта для слабовидящих">Версия сайта для слабовидящих</a>
+
                 </div>
                 <div class="col-lg-auto">
                     <nav class="">
                         <ul class="nav d-flex justify-content-center">
 
-                            <li class="nav__item">
-                                <a href="#" class="bvi-open" title="Версия сайта для слабовидящих">Версия сайта для слабовидящих</a>
-                            </li>
+
                             <li class="nav__item">
                                 <a href="/">Главная</a>
                             </li>
                             <li class="nav__item">
-                                <a href="/gallerey.html">Галерея</a>
+                                <a href="{% url 'Gallery' %}">Галерея</a>
                             </li>
                             <li class="nav__item">
                                 <a href="{% url 'News' %}">Новости</a>
@@ -26,9 +27,6 @@
                             <li class="nav__item">
                                 <a href="/info/{{ i.name }}">{{ i.name }}</a>
                             </li>
-
-
-
 
                             {% endfor %}
                         </ul>
