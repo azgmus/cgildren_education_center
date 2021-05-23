@@ -3,6 +3,7 @@
 
 {% block content %}
     <div class="container">
-    <h1>{{ group.schedule }}</h1>
+    <h1>{{ group.name }}</h1>
+    <div>{{ group.schedule| safe }}</div>
     </div>
 {% endblock content %}

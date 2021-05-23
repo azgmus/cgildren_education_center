@@ -10,7 +10,7 @@
             <div class="demo-gallery">
                 <ul id="lightgallery" class="list-unstyled lightgallery row">
                     {% for picture in picture_list %}
-                       <li class="col-xs-6 col-sm-4 col-md-3" data-src="{{ picture.image.url }}" data-sub-html="<h4>картинка 1</h4>">
+                       <li class="col-xs-6 col-sm-4 col-md-3" data-src="{{ picture.image.url }}" data-sub-html="<h4>{{ picture.description }}</h4>">
                         <a href="">
                             <img class="img-responsive" src="{{ picture.image.url }}">
                         </a>

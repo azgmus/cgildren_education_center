@@ -8,17 +8,30 @@ from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 
 class InfoPagesAdminForm(forms.ModelForm):
-    content = forms.CharField(label="содержание", widget=CKEditorUploadingWidget())
+    schedule = forms.CharField(label="содержание", widget=CKEditorUploadingWidget())
 
     class Meta:
         model = InfoPages
         fields = '__all__'
 
 
-admin.site.register(KidsGroup)
+
+
+class KidsGroupForm(forms.ModelForm):
+    schedule = forms.CharField(label="расписание", widget=CKEditorUploadingWidget())
+
+    class Meta:
+        model = KidsGroup
+        fields = '__all__'
+
+
+@admin.register(KidsGroup)
+class InfoPagesAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    form = KidsGroupForm
+
+
 admin.site.register(GeneralInfo)
-
-
 @admin.register(InfoPages)
 class InfoPagesAdmin(admin.ModelAdmin):
     list_display = ('name',)
