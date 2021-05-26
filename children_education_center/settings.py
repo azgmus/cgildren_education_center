@@ -90,8 +90,13 @@ WSGI_APPLICATION = 'children_education_center.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'df3dglc6u5p2o',
+        'Host': 'ec2-54-167-152-185.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'gljwpmkgmdzbjq',
+        'PASSWORD': '32bf3717eb5b373ffbf99bed79a007c5199f9ee911fd31b2c0a92a0d915481aa'
+
     }
 }
 
