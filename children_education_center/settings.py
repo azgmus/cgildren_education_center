@@ -27,7 +27,8 @@ SECRET_KEY = 'y9@6^la_#s3qi=a0$1r*a1o92x=tjs0&6a4t-%d_&b1ji*igwh'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1',
-		'0.0.0.0']
+                '0.0.0.0',
+                'diplomasite.herokuapp.com']
 
 
 # Application definition
