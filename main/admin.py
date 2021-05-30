@@ -14,7 +14,12 @@ class InfoPagesAdminForm(forms.ModelForm):
         model = InfoPages
         fields = '__all__'
 
+class InfoPagesAdminForm(forms.ModelForm):
+    content = forms.CharField(label="текст страницы", widget=CKEditorUploadingWidget())
 
+    class Meta:
+        model = InfoPages
+        fields = '__all__'
 
 
 class KidsGroupForm(forms.ModelForm):
@@ -26,7 +31,7 @@ class KidsGroupForm(forms.ModelForm):
 
 
 @admin.register(KidsGroup)
-class InfoPagesAdmin(admin.ModelAdmin):
+class KidsGroupAdmin(admin.ModelAdmin):
     list_display = ('name',)
     form = KidsGroupForm
 
