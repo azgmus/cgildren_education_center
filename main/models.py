@@ -30,6 +30,7 @@ class InfoPages(models.Model):
 
 class GeneralInfo(models.Model):
     contact_email = models.CharField('имейл, который будет показываться на каждой странице сайта', max_length=50)
+    contact_form_email = models.CharField('имейл, на который будет приходить сообщение с контактной формы', max_length=50, null=True)
     contact_phone = models.CharField('номер телефона, который будет показываться на каждой странице сайта', max_length=50)
 
     class Meta:
