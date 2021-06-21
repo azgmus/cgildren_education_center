@@ -33,6 +33,11 @@ class GeneralInfo(models.Model):
     contact_form_email = models.CharField('имейл, на который будет приходить сообщение с контактной формы', max_length=50, null=True)
     contact_phone = models.CharField('номер телефона, который будет показываться на каждой странице сайта', max_length=50)
 
+    def __str__(self):
+        if self.id == 1: return 'общая информация'
+        else: return 'не надо создавать записи в этой таблице'
+    
     class Meta:
         verbose_name = "общая информация"
         verbose_name_plural = "общая информация"
+       

@@ -227,10 +227,10 @@ CKEDITOR_CONFIGS = {
 
 
 
-EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
 
-EMAIL_HOST_USER = 'razvitiya.tsentr@list.ru'
+EMAIL_HOST_USER = 'razvitiya.centr@gmail.com'
 EMAIL_HOST_PASSWORD = 'qazwsxedcrfv1243'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
